@@ -1,4 +1,4 @@
-package org.iakei.log.listeners;
+package org.iakei.log.config;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
