@@ -27,7 +27,7 @@ public class BootLogsTopicListeners implements KafkaListeners{
 		Optional<?> messages = Optional.ofNullable(record.value());
 		if (messages.isPresent()) {
 			Object msg = messages.get();
-			LOGGER.info("bootLogsTopic send message ={}",msg);
+			LOGGER.debug("bootLogsTopic send message ={}",msg);
 			if(msg instanceof String){
 				LogsInfo logsInfo=JSON.parseObject(msg.toString(), LogsInfo.class);
 				logsService.save(logsInfo);

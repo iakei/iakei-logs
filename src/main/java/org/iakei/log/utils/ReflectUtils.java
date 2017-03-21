@@ -1,4 +1,4 @@
-package org.iakei.log.common;
+package org.iakei.log.utils;
 
 import java.io.File;
 import java.io.IOException;
