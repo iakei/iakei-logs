@@ -6,7 +6,6 @@ import java.util.Map;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.iakei.log.listeners.BootLogsTopicListeners;
-import org.iakei.log.listeners.BootSyncTopicListeners;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -49,11 +48,6 @@ public class KafkaConsumerConfig {
 		properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
 
 		return new DefaultKafkaConsumerFactory<String, String>(properties);
-	}
-
-	@Bean
-	public KafkaListeners BootSyncListeners() {
-		return new BootSyncTopicListeners();
 	}
 	
 	@Bean

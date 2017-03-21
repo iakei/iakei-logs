@@ -1,7 +1,5 @@
 package org.iakei.log.entity;
 
-import java.util.Date;
-
 public class LogsInfo {
 
 	private String module;// 服务模块
@@ -41,4 +39,11 @@ public class LogsInfo {
 		this.createTime = createTime;
 	}
 
+	@Override
+	public String toString() {
+		return "LogsInfo [module=" + module + ", userId=" + userId + ", content=" + content + ", createTime="
+				+ createTime + "]";
+	}
+
+	
 }
